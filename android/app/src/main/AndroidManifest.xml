@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mobx.`in`.mobx">
+    package="com.mobx.in.mobx">
    <application
         android:label="mobx"
         android:name="${applicationName}"

@@ -26,6 +26,8 @@ class Utility {
     );
   }
 
+
+
   ///hide keyboard from screen
   static void hideKeyBoard() {
     SystemChannels.textInput.invokeMethod('TextInput.hide');
@@ -225,6 +227,8 @@ String readTimestamp(int timestamp) {
 
   return time;
 }
+double getCurrentScreenHeight(BuildContext context) => MediaQuery.of(context).size.height;
+double getCurrentScreenWidth(BuildContext context) => MediaQuery.of(context).size.width;
 
 int timeInMillis = 1586348737122;
 var date = DateTime.fromMillisecondsSinceEpoch(timeInMillis);
