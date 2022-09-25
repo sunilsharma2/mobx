@@ -16,12 +16,15 @@ class LoginScreen extends StatelessWidget {
 static bool checkedValue = false;
 
 
+Widget appBarTitle(BuildContext context,String titleText){
+  return Text(titleText,style:  Theme.of(context).textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w600),);
+}
 
   @override
   Widget build(BuildContext context) {
   
     return Scaffold(
-      appBar: AppBarCommon("LOGIN", appBar: AppBar(), onTapCallback: (){}),
+      appBar: AppBarCommon(appBarTitle(context, "LOGIN"), appbar: AppBar(), onTapCallback: (){}),
       body: Center(
         child: SingleChildScrollView(
           child: Container(

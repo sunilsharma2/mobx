@@ -16,13 +16,15 @@ class EnterOtp extends StatelessWidget {
   const EnterOtp({Key? key}) : super(key: key);
   static bool checkedValue = false;
 
-
+  Widget appBarTitle(BuildContext context,String titleText){
+    return Text(titleText,style:  Theme.of(context).textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w600),);
+  }
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBarCommon("ENTER OTP", appBar: AppBar(), onTapCallback: (){}),
+      appBar: AppBarCommon(appBarTitle(context, "ENTER OTP"), appbar: AppBar(), onTapCallback: (){}),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(15),

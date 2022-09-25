@@ -9,17 +9,19 @@ import 'package:mobx/utils/utilities.dart';
 
 class AppBarCommon extends StatelessWidget implements PreferredSizeWidget{
 
-  final String titleText;
-  final AppBar appBar;
+  final Widget titleText;
+  final AppBar appbar;
   final String leadingImage;
   final VoidCallback onTapCallback;
+  final List<Widget>? trailingAction;
 
-  const AppBarCommon(this.titleText,{Key? key,required this.appBar ,
+  const AppBarCommon(this.titleText,{Key? key,required this.appbar ,this.trailingAction,
     this.leadingImage = "assets/images/logo_design.png", required this.onTapCallback }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      actions: trailingAction,
       bottom: PreferredSize(
           child: Container(
             color: Utility.getColorFromHex(globalGreyColor),
@@ -28,12 +30,12 @@ class AppBarCommon extends StatelessWidget implements PreferredSizeWidget{
           preferredSize: Size.fromHeight(4.0)),
       elevation: 0,
       backgroundColor: Utility.getColorFromHex(globalWhiteColor).withOpacity(0.8),
-      title: Text(titleText,style:  Theme.of(context).textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w600),),
+      title: titleText,
     );
   }
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(appBar.preferredSize.height);
+  Size get preferredSize => Size.fromHeight(appbar.preferredSize.height);
 
 }
