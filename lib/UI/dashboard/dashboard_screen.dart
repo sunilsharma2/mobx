@@ -38,7 +38,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBarCommon(Image.asset("assets/images/mobex_logo.png"),
         appbar: AppBar(), onTapCallback: (){},trailingAction: [Icon(Icons.search,color: Colors.black,),
-          Icon(Icons.shopping_cart,color: Colors.black,)],),
+          Icon(Icons.shopping_cart,color: Colors.black,),SizedBox(width: 10,)],),
       bottomNavigationBar: BottomNavigationBar(
         items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
