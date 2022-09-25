@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/UI/dashboard/home/home_sc.dart';
-import 'package:mobx/UI/dashboard/orders/orders_home.dart';
-import 'package:mobx/UI/dashboard/profile/profile_screen.dart';
-import 'package:mobx/UI/dashboard/repair/repair_home.dart';
-import 'package:mobx/UI/dashboard/sell/sell_home.dart';
 import 'package:mobx/provider/dashboard/dashboard_provider.dart';
 import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
 import '../../common_widgets/app_bar_common.dart';
 import 'package:provider/provider.dart';
@@ -18,14 +15,23 @@ import 'package:provider/provider.dart';
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    SellHome(),
-    RepairHome(),
-    OrdersHome(),
-    ProfileScreen()
-  ];
 
+  void _gotoScreen(int index,BuildContext context){
+    switch(index){
+      case 1:
+        Navigator.pushNamed(context, Routes.sellHome);
+        break;
+      case 2:
+        Navigator.pushNamed(context, Routes.repairHome);
+        break;
+      case 3:
+        Navigator.pushNamed(context, Routes.ordersHome);
+        break;
+      case 4:
+        Navigator.pushNamed(context, Routes.profileScreen);
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,17 +58,17 @@ class DashboardScreen extends StatelessWidget {
             label: 'Orders',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset("assets/images/profile_icon.png",color: Colors.amber[800],),
+            icon: Image.asset("assets/images/profile_icon.png",),
             label: 'Profile',
           ),
         ],
         currentIndex: context.watch<DashboardProvider>().selectedIndex,
         selectedItemColor: Colors.amber[800],
-        onTap: (int index) =>context.read<DashboardProvider>().setSelectedIndex(index),
+        onTap: (int index) => _gotoScreen(index,context),
         unselectedItemColor: Utility.getColorFromHex(globalBlackColor),
         showUnselectedLabels: true,
       ),
-      body: _widgetOptions.elementAt(context.watch<DashboardProvider>().selectedIndex),
+      body: HomeScreen(),
     );
   }
 }

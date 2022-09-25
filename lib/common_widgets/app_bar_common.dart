@@ -11,16 +11,17 @@ class AppBarCommon extends StatelessWidget implements PreferredSizeWidget{
 
   final Widget titleText;
   final AppBar appbar;
-  final String leadingImage;
+  final Widget? leadingImage;
   final VoidCallback onTapCallback;
   final List<Widget>? trailingAction;
 
   const AppBarCommon(this.titleText,{Key? key,required this.appbar ,this.trailingAction,
-    this.leadingImage = "assets/images/logo_design.png", required this.onTapCallback }) : super(key: key);
+    this.leadingImage, required this.onTapCallback }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: leadingImage,
       actions: trailingAction,
       bottom: PreferredSize(
           child: Container(

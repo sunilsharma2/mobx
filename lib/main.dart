@@ -4,6 +4,7 @@ import 'package:mobx/UI/auth/login_screen.dart';
 import 'package:mobx/UI/dashboard/dashboard_screen.dart';
 import 'package:mobx/provider/dashboard/dashboard_provider.dart';
 import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +19,8 @@ void main(){
       ChangeNotifierProvider(create: (_) => DashboardProvider())
     ],
     child: MaterialApp(
+      onGenerateRoute: Routes.generatedRoute,
+      initialRoute: Routes.dashboardScreen,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           fontFamily: "Gotham",
