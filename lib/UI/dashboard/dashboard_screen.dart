@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/UI/dashboard/home/home_sc.dart';
+import 'package:mobx/UI/dashboard/home/product_listing.dart';
 import 'package:mobx/provider/dashboard/dashboard_provider.dart';
 import 'package:mobx/utils/constants.dart';
 import 'package:mobx/utils/routes.dart';
@@ -68,7 +69,7 @@ class DashboardScreen extends StatelessWidget {
         unselectedItemColor: Utility.getColorFromHex(globalBlackColor),
         showUnselectedLabels: true,
       ),
-      body: HomeScreen(),
+      body: ProductListing(),
     );
   }
 }

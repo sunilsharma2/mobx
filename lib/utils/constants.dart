@@ -10,9 +10,9 @@ const PREF_ED_N = "ED_N";
 
 
 ///colors
-const globalGreenColor = "#00883C";
 const globalWhiteColor = "#FFFFFF";
 const globalGreyColor = "#C6C6C8";
 const globalBlackColor = "#000000";
 const globalOrangeColor = "#F06222";
 const globalSubTextGreyColor = "#5F5F5F";
+const globalGreenColor = "#6AB84F";

@@ -26,7 +26,7 @@ void main(){
           fontFamily: "Gotham",
           textTheme: TextTheme(
               bodyText2: TextStyle(fontSize: 14.0, color: Utility.getColorFromHex(globalBlackColor)),
-              caption: TextStyle(fontSize: 12.0,color:  Utility.getColorFromHex("#1A1A1A"),fontWeight: FontWeight.w400)
+              caption: TextStyle(fontSize: 12.0,color:  Utility.getColorFromHex(globalSubTextGreyColor),fontWeight: FontWeight.w400)
           )
 
       ),
