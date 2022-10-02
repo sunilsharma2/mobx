@@ -6,7 +6,7 @@ import 'package:mobx/utils/utilities.dart';
 
 import '../../../common_widgets/dashboard/grid_Item.dart';
 
-
+import 'dart:math' as math;
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({Key? key}) : super(key: key);
@@ -17,14 +17,14 @@ class HomeScreen extends StatelessWidget {
   final List<String> _exploreListText  = ["Refurbished Mobiles","Smart Watches","Tablets/iPads","Laptops","Headphones","Earphones"];
 
   Widget _exploreItem(BuildContext context,String txt){
-    return GestureDetector(
-      onTap: ()=> Navigator.pushNamed(context, Routes.productListing),
-      child: Expanded(
+    return Expanded(
+      child: GestureDetector(
+        onTap: ()=> Navigator.pushNamed(context, Routes.productListing),
         child: Container(
           margin: EdgeInsets.only(right: 8,bottom: 8),
           padding: EdgeInsets.all(8),
           decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),
-              color: Utility.getColorFromHex(globalGreyColor)),
+              color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.1)),
           child: Row(
             children: [
               Expanded(child: Text(txt,style: Theme.of(context).textTheme.bodyText2!.copyWith(fontSize: 10),)),
@@ -89,7 +89,6 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: getCurrentScreenHeight(context)/2.5,
             child: ListView.builder(
-              shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: 6,
                 itemBuilder: (context,index){

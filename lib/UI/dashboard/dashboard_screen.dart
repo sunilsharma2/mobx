@@ -41,8 +41,9 @@ class DashboardScreen extends StatelessWidget {
         padding: const EdgeInsets.only(left: 10),
         child: Image.asset("assets/images/mobex_logo.png"),
       ),
-        appbar: AppBar(), onTapCallback: (){},trailingAction: [Icon(Icons.search,color: Colors.black,),
-          Icon(Icons.shopping_cart,color: Colors.black,),SizedBox(width: 10,)],),
+        appbar: AppBar(), onTapCallback: (){},trailingAction: [Icon(Icons.search,color
+            :Utility.getColorFromHex(globalSubTextGreyColor),size: 25,),
+          Image.asset("assets/images/lock.png")],),
       bottomNavigationBar: BottomNavigationBar(
         items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
