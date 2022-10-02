@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobx/common_widgets/app_bar_common.dart';
+import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/dashboard/app_bar_title.dart';
 
 

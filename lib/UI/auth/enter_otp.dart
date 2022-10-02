@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobx/common_widgets/app_bar_common.dart';
-import 'package:mobx/common_widgets/app_button.dart';
+import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
+import 'package:mobx/common_widgets/globally_common/app_button.dart';
 import 'package:mobx/common_widgets/common_textfield_style.dart';
 import 'package:mobx/utils/constants.dart';
 import 'package:mobx/utils/utilities.dart';

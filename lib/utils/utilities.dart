@@ -230,6 +230,17 @@ String readTimestamp(int timestamp) {
 double getCurrentScreenHeight(BuildContext context) => MediaQuery.of(context).size.height;
 double getCurrentScreenWidth(BuildContext context) => MediaQuery.of(context).size.width;
 
+verticalSpacing({required double heightInDouble,required BuildContext context}){
+  return SizedBox(height: getCurrentScreenHeight(context)*heightInDouble);
+}
+horizontalSpacing({required double heightInDouble,required BuildContext context}){
+  return SizedBox(width: getCurrentScreenWidth(context)*heightInDouble);
+}
+
+Widget dividerCommon(BuildContext context){
+  return Divider(height: getCurrentScreenHeight(context)*0.02);
+}
+
 int timeInMillis = 1586348737122;
 var date = DateTime.fromMillisecondsSinceEpoch(timeInMillis);
 var formattedDate = DateFormat.yMMMd().format(date); // Apr 8, 2

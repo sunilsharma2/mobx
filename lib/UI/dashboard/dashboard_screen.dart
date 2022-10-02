@@ -5,7 +5,7 @@ import 'package:mobx/provider/dashboard/dashboard_provider.dart';
 import 'package:mobx/utils/constants.dart';
 import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
-import '../../common_widgets/app_bar_common.dart';
+import '../../common_widgets/globally_common/app_bar_common.dart';
 import 'package:provider/provider.dart';
 
 
@@ -37,7 +37,10 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCommon(Image.asset("assets/images/mobex_logo.png"),
+      appBar: AppBarCommon(Padding(
+        padding: const EdgeInsets.only(left: 10),
+        child: Image.asset("assets/images/mobex_logo.png"),
+      ),
         appbar: AppBar(), onTapCallback: (){},trailingAction: [Icon(Icons.search,color: Colors.black,),
           Icon(Icons.shopping_cart,color: Colors.black,),SizedBox(width: 10,)],),
       bottomNavigationBar: BottomNavigationBar(
@@ -69,7 +72,7 @@ class DashboardScreen extends StatelessWidget {
         unselectedItemColor: Utility.getColorFromHex(globalBlackColor),
         showUnselectedLabels: true,
       ),
-      body: ProductListing(),
+      body: HomeScreen(),
     );
   }
 }

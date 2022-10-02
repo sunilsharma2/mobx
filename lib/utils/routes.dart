@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:mobx/UI/auth/login_screen.dart';
 import 'package:mobx/UI/dashboard/dashboard_screen.dart';
 import 'package:mobx/UI/dashboard/home/home_sc.dart';
+import 'package:mobx/UI/dashboard/home/product_details1.dart';
+import 'package:mobx/UI/dashboard/home/product_listing.dart';
 import 'package:mobx/UI/dashboard/orders/orders_home.dart';
 import 'package:mobx/UI/dashboard/profile/profile_screen.dart';
 import 'package:mobx/UI/dashboard/sell/sell_home.dart';
 
+import '../UI/dashboard/home/product_details2.dart';
+import '../UI/dashboard/home/product_details3.dart';
+import '../UI/dashboard/home/shopping_cart.dart';
 import '../UI/dashboard/repair/repair_home.dart';
 
 
@@ -24,6 +29,11 @@ class Routes {
   static const repairHome = "repairHome";
   static const ordersHome = "ordersHome";
   static const profileScreen = "profileScreen";
+  static const productDetail1 = "productDetail1";
+  static const productDetail2 = "productDetail2";
+  static const productDetail3 = "productDetail3";
+  static const shoppingCart = "shoppingCart";
+  static const productListing = "productListing";
 
 static Route<dynamic> generatedRoute(RouteSettings settings){
         switch(settings.name){
@@ -41,6 +51,16 @@ static Route<dynamic> generatedRoute(RouteSettings settings){
             return MaterialPageRoute(builder: (_) => ProfileScreen());
           case ordersHome:
             return MaterialPageRoute(builder: (_) => OrdersHome());
+          case productDetail1:
+            return MaterialPageRoute(builder: (_) => ProductDetails1());
+          case productDetail2:
+            return MaterialPageRoute(builder: (_) => ProductDetails2());
+          case productDetail3:
+            return MaterialPageRoute(builder: (_) => ProductDetails3());
+          case shoppingCart:
+            return MaterialPageRoute(builder: (_) => ShoppingCart());
+          case productListing:
+            return MaterialPageRoute(builder: (_) => ProductListing());
           default:
             return MaterialPageRoute(
                 builder: (_) => Scaffold(

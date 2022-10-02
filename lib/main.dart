@@ -25,12 +25,10 @@ void main(){
       theme: ThemeData(
           fontFamily: "Gotham",
           textTheme: TextTheme(
-              bodyText2: TextStyle(fontSize: 14.0, color: Utility.getColorFromHex(globalBlackColor)),
-              caption: TextStyle(fontSize: 12.0,color:  Utility.getColorFromHex(globalSubTextGreyColor),fontWeight: FontWeight.w400)
+              bodyText2: TextStyle(fontSize: 14.0, color: Utility.getColorFromHex(globalBlackColor),fontWeight: FontWeight.w600),
+              caption: TextStyle(fontSize: 12.0,color:  Utility.getColorFromHex(globalSubTextGreyColor),fontWeight: FontWeight.w400,height: 1.3)
           )
-
       ),
-
       home: DashboardScreen(),
     ),
 

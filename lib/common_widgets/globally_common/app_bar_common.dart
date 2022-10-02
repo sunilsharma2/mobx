@@ -21,6 +21,8 @@ class AppBarCommon extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      titleSpacing: 0,
+      automaticallyImplyLeading: false,
       leading: leadingImage,
       actions: trailingAction,
       bottom: PreferredSize(
