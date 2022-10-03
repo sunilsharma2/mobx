@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobx/UI/dashboard/home/home_sc.dart';
 import 'package:mobx/UI/dashboard/home/product_listing.dart';
 import 'package:mobx/provider/dashboard/dashboard_provider.dart';
-import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/constants/constants_colors.dart';
 import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
 import '../../common_widgets/globally_common/app_bar_common.dart';

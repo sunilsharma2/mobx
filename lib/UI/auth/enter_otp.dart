@@ -3,8 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/globally_common/app_button.dart';
 import 'package:mobx/common_widgets/common_textfield_style.dart';
-import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/constants/constants_colors.dart';
 import 'package:mobx/utils/utilities.dart';
+
+import '../../utils/routes.dart';
 
 
 
@@ -24,7 +26,10 @@ class EnterOtp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBarCommon(appBarTitle(context, "ENTER OTP"), appbar: AppBar(), onTapCallback: (){}),
+      appBar: AppBarCommon(Padding(
+        padding: const EdgeInsets.only(left: 10),
+        child: appBarTitle(context, "ENTER OTP"),
+      ), appbar: AppBar(), onTapCallback: (){}),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(15),
@@ -61,7 +66,9 @@ class EnterOtp extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text("Resent OTP | 00:20",style:  Theme.of(context).textTheme.caption!.copyWith(color: Utility.getColorFromHex("#5F5F5F")),)),
               SizedBox(height: getCurrentScreenHeight(context)*0.03,),
-              AppButton(onTap: (){}, text: "VERIFY OTP")
+              AppButton(onTap: () {
+                Navigator.pushNamed(context, Routes.dashboardScreen);
+              }, text: "VERIFY OTP")
             ],
           ),
         ),

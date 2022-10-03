@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/dashboard/app_bar_title.dart';
 import 'package:mobx/common_widgets/globally_common/app_button_leading.dart';
-import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/constants/constants_colors.dart';
 import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
 
@@ -103,7 +103,9 @@ class ProductDetails1 extends StatelessWidget {
                   btnColor: Utility.getColorFromHex("#E0E0E0"),)),
                 SizedBox(width: getCurrentScreenWidth(context)*0.03,),
                 Expanded(child: AppButtonLeading(leadingImage: "assets/images/buy_now.png",
-                    onTap: (){}, text: "BUY NOW",btnTxtColor: Utility.getColorFromHex(globalWhiteColor),)),
+                    onTap: (){
+                      Navigator.pushNamed(context, Routes.productDetail2);
+                    }, text: "BUY NOW",btnTxtColor: Utility.getColorFromHex(globalWhiteColor),)),
               ],
             ),
             SizedBox(height: getCurrentScreenHeight(context)*0.02,),

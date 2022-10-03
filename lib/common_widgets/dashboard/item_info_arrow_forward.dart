@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/constants.dart';
+import '../../utils/constants/constants_colors.dart';
 import '../../utils/utilities.dart';
 
 class ItemInfoArrowForward extends StatelessWidget {
