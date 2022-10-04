@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/dashboard/app_bar_title.dart';
 import 'package:mobx/common_widgets/globally_common/app_button_leading.dart';
-import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/constants/constants_colors.dart';
 import 'package:mobx/utils/utilities.dart';
 
 import '../../../utils/routes.dart';

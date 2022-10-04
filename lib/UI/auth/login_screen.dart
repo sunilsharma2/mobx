@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/globally_common/app_button.dart';
 import 'package:mobx/common_widgets/common_textfield_style.dart';
+import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
 
 
@@ -24,7 +25,10 @@ Widget appBarTitle(BuildContext context,String titleText){
   Widget build(BuildContext context) {
   
     return Scaffold(
-      appBar: AppBarCommon(appBarTitle(context, "LOGIN"), appbar: AppBar(), onTapCallback: (){}),
+      appBar: AppBarCommon(Padding(
+        padding: const EdgeInsets.only(left: 10),
+        child: appBarTitle(context, "LOGIN"),
+      ), appbar: AppBar(), onTapCallback: (){}),
       body: Center(
         child: SingleChildScrollView(
           child: Container(
@@ -65,7 +69,9 @@ Widget appBarTitle(BuildContext context,String titleText){
                   controlAffinity: ListTileControlAffinity.leading
                 ),
                 SizedBox(height: getCurrentScreenHeight(context)*0.03,),
-                AppButton(onTap: (){}, text: "CONTINUE")
+                AppButton(onTap: (){
+                  Navigator.pushNamed(context, Routes.enterOtp);
+                }, text: "CONTINUE")
               ],
             ),
           ),

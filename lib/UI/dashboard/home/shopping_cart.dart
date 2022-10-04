@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/dashboard/app_bar_title.dart';
-import 'package:mobx/utils/constants.dart';
+import 'package:mobx/utils/constants/constants_colors.dart';
 import 'package:mobx/utils/utilities.dart';
 
 import '../../../common_widgets/dashboard/item_info_arrow_forward.dart';
@@ -106,7 +106,10 @@ Widget _column(BuildContext context){
         appbar: AppBar(), onTapCallback: (){},leadingImage: GestureDetector(
             onTap: ()=> Navigator.pop(context),
             child: Image.asset("assets/images/back_arrow.png"))
-        ,trailingAction: [Icon(Icons.star_border_outlined,color: Colors.black,),],
+        ,trailingAction: [Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Icon(Icons.star_border_outlined,color: Colors.black,),
+        ),],
       ),
       body: SingleChildScrollView(
         child: Container(
