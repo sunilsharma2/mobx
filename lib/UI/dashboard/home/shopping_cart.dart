@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
 import 'package:mobx/common_widgets/dashboard/app_bar_title.dart';
 import 'package:mobx/utils/constants/constants_colors.dart';
+import 'package:mobx/utils/routes.dart';
 import 'package:mobx/utils/utilities.dart';
 
 import '../../../common_widgets/dashboard/item_info_arrow_forward.dart';
@@ -92,7 +93,9 @@ Widget _column(BuildContext context){
           ],
         ),
         SizedBox(height: getCurrentScreenHeight(context)*0.03,),
-        AppButton(onTap: (){}, text: "PLACE ORDER")
+        AppButton(onTap: (){
+          Navigator.pushNamed(context, Routes.orderConfirmed);
+        }, text: "PLACE ORDER")
       ],
     ),
   );

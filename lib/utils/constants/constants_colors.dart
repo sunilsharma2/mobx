@@ -16,3 +16,6 @@ const globalBlackColor = "#000000";
 const globalOrangeColor = "#F06222";
 const globalSubTextGreyColor = "#5F5F5F";
 const globalGreenColor = "#6AB84F";
+const globalTransparentColor="#00FFFFFF";
+const globalGreyBackgroundColor="#FAFAFA";
+const globalParrotColor="#06E745";

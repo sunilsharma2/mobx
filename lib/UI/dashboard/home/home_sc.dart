@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
   Widget _exploreItem(BuildContext context,String txt){
     return Expanded(
       child: GestureDetector(
-        onTap: ()=> Navigator.pushNamed(context, Routes.productListing),
+        onTap: ()=> Navigator.pushNamed(context, Routes.productListWithDeals),
         child: Container(
           margin: EdgeInsets.only(right: 8,bottom: 8),
           padding: EdgeInsets.all(8),

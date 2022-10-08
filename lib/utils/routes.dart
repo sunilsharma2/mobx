@@ -4,7 +4,9 @@ import 'package:mobx/UI/auth/login_screen.dart';
 import 'package:mobx/UI/auth/splash_screen.dart';
 import 'package:mobx/UI/dashboard/dashboard_screen.dart';
 import 'package:mobx/UI/dashboard/home/home_sc.dart';
+import 'package:mobx/UI/dashboard/home/order_confirmed.dart';
 import 'package:mobx/UI/dashboard/home/product_details1.dart';
+import 'package:mobx/UI/dashboard/home/product_list_with_deals.dart';
 import 'package:mobx/UI/dashboard/home/product_listing.dart';
 import 'package:mobx/UI/dashboard/orders/orders_home.dart';
 import 'package:mobx/UI/dashboard/profile/profile_screen.dart';
@@ -38,6 +40,8 @@ class Routes {
   static const productListing = "productListing";
   static const enterOtp = "enterOtp";
   static const splashScreen = "splashScreen";
+  static const productListWithDeals="productListWithDeals";
+  static const orderConfirmed="orderConfirmed";
 
 static Route<dynamic> generatedRoute(RouteSettings settings){
         switch(settings.name){
@@ -69,6 +73,10 @@ static Route<dynamic> generatedRoute(RouteSettings settings){
             return MaterialPageRoute(builder: (_) => EnterOtp());
           case splashScreen:
             return MaterialPageRoute(builder: (_) => SplashScreen());
+          case productListWithDeals:
+            return MaterialPageRoute(builder: (_) =>ProductListWithDeals());
+          case orderConfirmed:
+            return MaterialPageRoute(builder: (_) =>OrderConfirmed());
           default:
             return MaterialPageRoute(
                 builder: (_) => Scaffold(
