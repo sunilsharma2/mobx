@@ -94,7 +94,7 @@ Widget _column(BuildContext context){
         ),
         SizedBox(height: getCurrentScreenHeight(context)*0.03,),
         AppButton(onTap: (){
-          Navigator.pushNamed(context, Routes.orderConfirmed);
+          Navigator.pushNamed(context, Routes.payment);
         }, text: "PLACE ORDER")
       ],
     ),
@@ -131,9 +131,13 @@ Widget _column(BuildContext context){
               dividerCommon(context),
               ItemInfoArrowForward(onTap: (){}, title: "EMI OPTION", description: "3 interest-free payments of ₹ 15500 with"),
               dividerCommon(context),
-              ItemInfoArrowForward(onTap: (){}, title: "COUPONS", description: "Apply coupons"),
+              ItemInfoArrowForward(onTap: (){
+                Navigator.pushNamed(context, Routes.coupon);
+              }, title: "COUPONS", description: "Apply coupons"),
               dividerCommon(context),
-              ItemInfoArrowForward(onTap: (){}, title: "DELIVERY ADDRESS", description: "John Smith, 2nd 3rd 4th  Floor, Shashwat Business Park,Opp....."),
+              ItemInfoArrowForward(onTap: (){
+                Navigator.pushNamed(context, Routes.address);
+              }, title: "DELIVERY ADDRESS", description: "John Smith, 2nd 3rd 4th  Floor, Shashwat Business Park,Opp....."),
               dividerCommon(context),
               _column(context)
             ],
