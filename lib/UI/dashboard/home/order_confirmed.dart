@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/common_widgets/dashboard/app_bar_title.dart';
 import 'package:mobx/common_widgets/globally_common/app_bar_common.dart';
+import 'package:mobx/common_widgets/globally_common/outline_button.dart';
 import 'package:mobx/utils/constants/constants_colors.dart';
 import 'package:mobx/utils/constants/strings.dart';
 import 'package:mobx/utils/utilities.dart';
@@ -50,16 +51,9 @@ class OrderConfirmed extends StatelessWidget {
            // verticalSpacing(heightInDouble: 0.02, context: context),
             Text(Strings.confirmationMessage2),
             verticalSpacing(heightInDouble: 0.02, context: context),
-            OutlinedButton(
-              onPressed: () {},
-              style: OutlinedButton.styleFrom(
-                side:  BorderSide(width: 1.0, color: Utility.getColorFromHex(globalOrangeColor)),
-              ),
-              child: Text(Strings.viewDetailsButton,
-              style: const TextStyle(
-                color: Colors.black
-              ),),
-            )
+            OutLineButtonWidget(
+              onTap: (){},
+                text: Strings.viewDetailsButton),
 
           ],
         ),
